@@ -1,9 +1,21 @@
 package test;
 
 public class Member {
-
+	String name;
+	int age;
+	double height;
+	boolean hasbook;
+	
+public Member(String name, int age, double height, boolean hasbook) {
+	this.name = name;
+	this.age = age;
+	this.height = height;
+	this.hasbook = hasbook;
+}
 	public static void main(String[] args) {
-		System.out.println("김재준");
+		
+		Member m = new Member("김재준", 20, 20.0, true);
+		System.out.println(m);
 	}
 
 }

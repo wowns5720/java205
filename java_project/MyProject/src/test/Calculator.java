@@ -18,6 +18,12 @@ public class Calculator {
     }
 	public static void main(String[] args) {
 	
+		Calculator cal = new Calculator();
+		cal.add(1, 2);
+		cal.divide(6, 2);
+		cal.minus(5, 3);
+		cal.multiply(3, 2);
+		System.out.println();
 	}
 
 }
