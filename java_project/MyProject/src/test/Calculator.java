@@ -9,7 +9,7 @@ public class Calculator {
         return a-b;
     }
     
-    public int asdf(int a, int b) {
+    public int multiply(int a, int b) {
     	return a*b;
     }
     
