@@ -1,4 +1,7 @@
 package test;
+
+import java.util.Scanner;
+
 public class Calculator {
 	public int add(int a, int b) {   
         return a+b;
@@ -15,14 +18,41 @@ public class Calculator {
     public int divide(int a, int b) {
     	return a/b;
     }
+    public double circle(double r) {
+    	return 2*r*Math.PI;
+    }
+    public double area(double r) {
+    	return r*r*Math.PI;
+    }
+    public void print(int num1 , int num2) {
+    	System.out.println("결과는 : " + add(num1, num2));
+    	System.out.println("결과는 : " + minus(num1, num2));
+    	System.out.println("결과는 : " + multiply(num1, num2));
+    	System.out.println("결과는 : " + divide(num1, num2));
+    }
+    public void printCircle(int r) {
+    	System.out.println("결과는 : " + circle(r));
+    	System.out.println("결과는 : " + area(r));
+    }
+    
 	public static void main(String[] args) {
-	
+		
+		Scanner sc = new Scanner(System.in);
 		Calculator cal = new Calculator();
-		cal.add(1, 2);
-		cal.divide(6, 2);
-		cal.minus(5, 3);
-		cal.multiply(3, 2);
+		
+		System.out.println("숫자를 입력하세요.");
+		int num1 = sc.nextInt();
+		System.out.println("숫자를 입력하세요.");
+		int num2 = sc.nextInt();
+		cal.print(num1, num2);
+		
 		System.out.println();
+		System.out.println("원의 반지름을 입력하세요.");
+		int r = sc.nextInt();
+		cal.printCircle(r);
+		
+		
+
 	}
 
 }
