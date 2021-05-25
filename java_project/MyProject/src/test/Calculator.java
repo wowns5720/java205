@@ -3,6 +3,8 @@ package test;
 import java.util.Scanner;
 
 public class Calculator {
+	
+	float pi = 3.14f;
 	public int add(int a, int b) {   
         return a+b;
 	}
@@ -15,21 +17,25 @@ public class Calculator {
     	return a*b;
     }
     
-    public int divide(int a, int b) {
+    public float divide(float a, float b) {
     	return a/b;
     }
+    
     public double circle(double r) {
-    	return 2*r*Math.PI;
+    	return 2*r*pi;
     }
+    
     public double area(double r) {
-    	return r*r*Math.PI;
+    	return r*r*pi;
     }
+    
     public void print(int num1 , int num2) {
     	System.out.println("결과는 : " + add(num1, num2));
     	System.out.println("결과는 : " + minus(num1, num2));
     	System.out.println("결과는 : " + multiply(num1, num2));
     	System.out.println("결과는 : " + divide(num1, num2));
     }
+    
     public void printCircle(int r) {
     	System.out.println("결과는 : " + circle(r));
     	System.out.println("결과는 : " + area(r));
@@ -40,7 +46,7 @@ public class Calculator {
 		Scanner sc = new Scanner(System.in);
 		Calculator cal = new Calculator();
 		
-		System.out.println("숫자를 입력하세요.");
+		System.out.println("숫자를 입력하세요.");		
 		int num1 = sc.nextInt();
 		System.out.println("숫자를 입력하세요.");
 		int num2 = sc.nextInt();
