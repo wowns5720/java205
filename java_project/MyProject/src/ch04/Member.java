@@ -60,14 +60,14 @@ public class Member {
 		//태어난 년도를 입력하면 나이를 반환하는 메소드
 		int ageCal(int year) {
 			
-			int currentYear = Calendar.getInstance().get(Calendar.YEAR);
+//			int currentYear = Calendar.getInstance().get(Calendar.YEAR);
 			
-			return 0;
+			
+			return Calendar.getInstance().get(Calendar.YEAR)-year-1;
 		}
 
 	public static void main(String[] args) {
 		
-		System.out.println(Calendar.getInstance().get(Calendar.MONTH));
 		Scanner s = new Scanner(System.in);
 		System.out.println("태어난 년도를 입력해주세요.");
 		int birthYear = s.nextInt();
