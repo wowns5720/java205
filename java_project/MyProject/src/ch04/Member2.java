@@ -1,3 +1,4 @@
+
 package ch04;
 
 public class Member2 {
