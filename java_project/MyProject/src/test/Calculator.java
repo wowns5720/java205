@@ -3,11 +3,13 @@ package test;
 import java.util.Scanner;
 
 public class Calculator {
+
 	
 	float pi = 3.14f;
-	public int add(int a, int b) {   
+	public int add(int a, int b) {    
+	      
         return a+b;
-	}
+    }
     
     public int minus(int a, int b) {
         return a-b;
