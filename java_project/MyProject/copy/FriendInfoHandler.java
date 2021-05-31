@@ -1,13 +1,14 @@
-package ex.infomanager1;
+package ex.infomanager2.copy;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class FriendInfoHandler {
 
 	// 저장 데이터(객체)를 배열로 저장하고 관리하는 기능을 가지는 클래스
 	// 2021-05-31
 	// 배열 -> 컬렉션
-	Friend[] friends;
+//	Friend[] friends;
+	ArrayList<Friend> friends;
 	int numOfFriend; // 배열의 입력 index 역할, 정보의 개수
 
 	// 생성자
