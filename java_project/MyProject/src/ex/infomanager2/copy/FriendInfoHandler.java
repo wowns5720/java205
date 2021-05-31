@@ -9,12 +9,12 @@ public class FriendInfoHandler {
 	// 배열 -> 컬렉션
 //	Friend[] friends;
 	ArrayList<Friend> friends;
-	int numOfFriend; // 배열의 입력 index 역할, 정보의 개수
+//	int numOfFriend; // 배열의 입력 index 역할, 정보의 개수
 
 	// 생성자
 	public FriendInfoHandler(int num) { // 배열의 사이즈 -> 배열 인스턴스 생성
 		
-		friends f = new FriendInfoHandler(num);
+		friends  = new ArrayList<Friend>(num);
 	}
 
 	// 데이터의 입력 처리
@@ -38,13 +38,12 @@ public class FriendInfoHandler {
 			// HeighFriend hFriend = new HeighFriend(name, phoneNumber, address, work);
 			addFriendInfo(new HighFriend(name, phoneNumber, address, work));
 
-			public void addFriendsInfo() {}
 			// 배열에 요소 추가
 			// friends[numOfFriend] = hFriend;
 			// numOfFriend++;
 			
 			// 컬렉션 : List에 요소 추가
-			friends.add(f)
+			
 
 		} else { // 2. 대학친구
 
@@ -67,7 +66,9 @@ public class FriendInfoHandler {
 	// Friend 클래스를 상속하는 타입의 인스턴스를 받아 배열에 저장
 	public void addFriendInfo(Friend f) {
 		// 배열에 요소 추가
-		friends[numOfFriend++] = f;
+//		friends[numOfFriend++] = f;
+		
+		friends.add(f);
 		System.out.println("정보가 저장되었습니다.");
 	}
 
