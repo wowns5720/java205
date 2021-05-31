@@ -1,4 +1,4 @@
-package ex.infomanager;
+package ex.infomanager1;
 
 import java.util.Scanner;
 
@@ -13,28 +13,28 @@ public class FriendBook {
 		while (true) {
 
 			System.out.println("** 메뉴 선택 ******************");
-			System.out.println("1. 고교 친구 정보 입력");
-			System.out.println("2. 대학 친구 정보 입력");
-			System.out.println("3. 전체 정보 출력");
-			System.out.println("4. 기본 정보 출력");
-			System.out.println("5. 프로그램 종료");
+			System.out.println(Menu.HIGH_FRI + " .고교 친구 정보 입력");
+			System.out.println(Menu.UNIV_FRI + ". 대학 친구 정보 입력");
+			System.out.println(Menu.SHOW_ALL + ". 전체 정보 출력");
+			System.out.println(Menu.SHOW_BASIC + ". 기본 정보 출력");
+			System.out.println(Menu.EXIT + "5. 프로그램 종료");
 			System.out.println("*****************************");
 
 			System.out.println("메뉴를 선택하세요 >> ");			
 			int choice = Integer.parseInt(s.nextLine()) ;
 
 			switch (choice) {
-			case 1:
-			case 2:
+			case Menu.HIGH_FRI:
+			case Menu.UNIV_FRI:
 				handler.addFriend(choice);
 				break;
-			case 3:
+			case Menu.SHOW_ALL:
 				handler.showAllData();
 				break;
-			case 4:
+			case Menu.SHOW_BASIC:
 				handler.showAllBasicData();
 				break;
-			case 5:
+			case Menu.EXIT:
 				System.out.println("프로그램을 종료합니다.");
 				return;
 
@@ -44,3 +44,13 @@ public class FriendBook {
 	}
 
 }
+interface Menu{
+	int HIGH_FRI = 0;
+	int UNIV_FRI = 1;
+	int SHOW_ALL = 2;
+	int SHOW_BASIC = 3;
+	int EXIT = 4;
+}
+
+
+
