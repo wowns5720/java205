@@ -69,7 +69,7 @@ from emp
 where ename like '%A%' and ename like '%E%'
 ;
 --14. 담당업무가 CLERK, 또는 SALESMAN이면서 급여가 $1600, $950 또는 $1300이 아닌 사원의 이름, 담당업무, 급여를 출력하시오.
-select ename,job,sal
+select ename, job, sal
 from emp
 where (job = 'CLERK' or job = 'salesman') and not (sal = 1600 or sal = 950 or sal = 1300)
 ;
