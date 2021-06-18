@@ -9,6 +9,24 @@ import java.util.ArrayList;
 
 public class DeptDao {
 
+	// 싱글톤 패턴 : 여러개의 인스턴스를 생성하지 못하도록 하는 디자인 패턴
+	// 1. 외부클래스 또는 인스턴스에서 해당 클래스로 인스턴스를 생성하지 못하도록 처리
+	
+	DeptDao() {
+	}
+
+	// 2. 클래스 내부에서 인스턴스를 만들고
+	static private DeptDao dao = new DeptDao();
+	
+	// 3. 메소드를 통해서 반환하도록 처리
+	public static DeptDao getInstance() {
+		return dao;
+	}
+	
+	
+	
+	
+	
 	// 1. 전체 데이터 검색 기능
 	// 반환 타입 List<Dept>
 	// 매개변수 - Connection 객체 : Statement
@@ -147,9 +165,29 @@ public class DeptDao {
 		int result =0;
 		
 		// 데이터 베이스 처리 sql
+		PreparedStatement pstmt = null;
+		String sql = "delete from dept where deptno=?";
 		
-		
-		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, deptno);
+			
+			result = pstmt.executeUpdate();
+			
+			
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			
+			if(pstmt !=null) {
+				try {
+					pstmt.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+		}
 		
 		
 		
